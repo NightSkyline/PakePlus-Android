@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>非遗志 · 守护中华文脉</title>
+  <meta name="description" content="守护中华文脉，传承千年匠心。一场关于非物质文化遗产的古风之旅。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============ 欢迎入场卷轴 ============ -->
+  <div id="welcome" class="welcome" aria-hidden="false">
+    <div class="welcome__ink-wash"></div>
+    <div class="welcome__petals" id="petals"></div>
+
+    <div class="welcome__scroll">
+      <div class="welcome__scroll-rod welcome__scroll-rod--top"></div>
+      <div class="welcome__scroll-rod welcome__scroll-rod--bottom"></div>
+      <div class="welcome__scroll-paper">
+        <div class="welcome__seal">遺</div>
+        <h1 class="welcome__title">
+          <span class="welcome__title-char">非</span>
+          <span class="welcome__title-char">遺</span>
+          <span class="welcome__title-char">志</span>
+        </h1>
+        <p class="welcome__subtitle">守護中華文脈 · 傳承千年匠心</p>
+        <p class="welcome__poem">「一筆一墨皆山河，一針一線盡春秋」</p>
+        <button class="welcome__enter" id="enterBtn" type="button">
+          <span class="welcome__enter-text">入&nbsp;境</span>
+          <span class="welcome__enter-ink"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 主站 ============ -->
+  <div class="site" id="site" aria-hidden="true">
+
+    <!-- 页首 -->
+    <header class="header">
+      <div class="header__brand">
+        <span class="header__seal">遺</span>
+        <span class="header__name">非遗志</span>
+      </div>
+      <nav class="header__nav">
+        <a href="#showcase" class="header__link">匠心</a>
+        <a href="#about" class="header__link">缘起</a>
+        <span class="header__link header__link--mute">守护 · 传承</span>
+      </nav>
+    </header>
+
+    <!-- 英雄区 -->
+    <section class="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__veil"></div>
+      <div class="hero__inner">
+        <div class="hero__eyebrow">中華非物質文化遺產</div>
+        <h2 class="hero__title">守護文脈<span class="hero__title-dot">·</span>傳承匠心</h2>
+        <p class="hero__desc">
+          千年之技，凝於一器一物；百代之藝，傳於一針一墨。<br/>
+          擇一門而入，觀其影，聆其聲，答其問，承其魂。
+        </p>
+        <a href="#showcase" class="hero__cta">
+          <span>擇·一門</span>
+          <span class="hero__cta-arrow">↓</span>
+        </a>
+      </div>
+      <div class="hero__clouds"></div>
+    </section>
+
+    <!-- 长廊：左右持续左移的主题卡 -->
+    <section class="showcase" id="showcase">
+      <div class="showcase__heading">
+        <div class="showcase__rule"></div>
+        <h2 class="showcase__title">諸位匠心</h2>
+        <p class="showcase__sub">六門非遺，自左而右徐徐而過 · 輕點以觀全貌</p>
+        <div class="showcase__rule"></div>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <div class="gallery__track" id="galleryTrack"><!-- 卡片由 JS 注入 --></div>
+      </div>
+
+      <div class="gallery__hint">←&nbsp;長廊徐行&nbsp;→</div>
+    </section>
+
+    <!-- 缘起 -->
+    <section class="about" id="about">
+      <div class="about__panel">
+        <div class="about__seal">緣</div>
+        <h2 class="about__title">何以傳承</h2>
+        <p class="about__text">
+          非物質文化遺產，非金石之器，乃活態之魂。口耳相傳，手把手授，一息尚存，一脈不絕。
+          然時代洪流，老藝凋零，傳人漸稀。吾輩記其影、存其聲、習其意，方使千載匠心不致湮沒。
+          此站所錄六門，皆中華非遺之要，願君駐足片刻，於一觀一答之間，識其名，敬其魂。
+        </p>
+        <div class="about__stats">
+          <div class="about__stat"><span class="about__stat-num">6</span><span class="about__stat-label">非遺門類</span></div>
+          <div class="about__stat"><span class="about__stat-num">18</span><span class="about__stat-label">趣味問答</span></div>
+          <div class="about__stat"><span class="about__stat-num">∞</span><span class="about__stat-label">匠心傳承</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+      <div class="footer__line"></div>
+      <p class="footer__text">非遗志 · 守護中華文脈 · 傳承千年匠心</p>
+      <p class="footer__small">本站為非遺科普觀賞用途 · 圖像由生成式工具輔助製作</p>
+    </footer>
+  </div>
+
+  <!-- ============ 详情幕（点主题后展开） ============ -->
+  <div class="detail" id="detail" aria-hidden="true">
+    <div class="detail__veil"></div>
+    <div class="detail__panel" id="detailPanel">
+      <button class="detail__close" id="detailClose" aria-label="返回">✕</button>
+
+      <!-- 介绍阶段：完整「视频」+ 详细介绍 -->
+      <div class="detail__stage" id="detailStage">
+        <div class="detail__head">
+          <span class="detail__seal" id="detailSeal">藝</span>
+          <div class="detail__head-text">
+            <h2 class="detail__title" id="detailTitle"></h2>
+            <p class="detail__subtitle" id="detailSubtitle"></p>
+          </div>
+          <div class="detail__meta" id="detailMeta"></div>
+        </div>
+
+        <!-- 完整「视频」：宽幅动效画面 + 进度条 -->
+        <div class="player" id="player">
+          <div class="player__screen" id="playerScreen">
+            <img class="player__img" id="playerImg" alt="" />
+            <div class="player__grain"></div>
+            <div class="player__petals" id="playerPetals"></div>
+            <div class="player__caption" id="playerCaption"></div>
+            <div class="player__ended" id="playerEnded" aria-hidden="true">
+              <p>影·已·終</p>
+            </div>
+          </div>
+          <div class="player__bar">
+            <div class="player__progress" id="playerProgress"></div>
+          </div>
+          <div class="player__controls">
+            <span class="player__ctrl-label" id="playerLabel">觀影中…</span>
+            <span class="player__ctrl-skip" id="playerSkip" role="button" tabindex="0">略過影段 ▸</span>
+          </div>
+        </div>
+
+        <!-- 详细介绍 -->
+        <article class="detail__content" id="detailContent"></article>
+
+        <div class="detail__cta" id="detailCta">
+          <button class="btn-ink" id="startQuizBtn" type="button">
+            <span>既觀其影 · 試答其問</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 答题阶段 -->
+      <div class="quiz" id="quiz" aria-hidden="true">
+        <div class="quiz__head">
+          <div class="quiz__seal">問</div>
+          <h3 class="quiz__title">三問之中，答對二題即為通關</h3>
+          <div class="quiz__counter" id="quizCounter">第 一 問 / 共 三 問</div>
+        </div>
+        <div class="quiz__question" id="quizQuestion"></div>
+        <div class="quiz__options" id="quizOptions"></div>
+        <div class="quiz__meter" id="quizMeter">
+          <span class="quiz__dot" data-i="0"></span>
+          <span class="quiz__dot" data-i="1"></span>
+          <span class="quiz__dot" data-i="2"></span>
+        </div>
+      </div>
+
+      <!-- 结果阶段 -->
+      <div class="result" id="result" aria-hidden="true">
+        <div class="result__fx" id="resultFx"></div>
+        <div class="result__core">
+          <div class="result__stamp" id="resultStamp"></div>
+          <h3 class="result__title" id="resultTitle"></h3>
+          <p class="result__score" id="resultScore"></p>
+          <p class="result__desc" id="resultDesc"></p>
+          <div class="result__actions">
+            <button class="btn-ghost" id="retryBtn" type="button">再試一回</button>
+            <button class="btn-ink" id="backBtn" type="button">返·長廊</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 全局飘墨粒子层 -->
+  <canvas class="fx-canvas" id="fxCanvas"></canvas>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
